@@ -1,0 +1,384 @@
+;; Object compat/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "compat/"
+  :tables
+  (list
+    (semanticdb-table "socket.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_SOCKET_H__" variable (:constant-flag t) nil [898 920])
+            ("OSERR_EWOULDBLOCK" variable (:constant-flag t) nil [4923 4940])
+            ("OSERR_EINPROGRESS" variable (:constant-flag t) nil [4966 4983])
+            ("OSERR_ECONNRESET" variable (:constant-flag t) nil [5009 5025])
+            ("OSERR_ENOTCONN" variable (:constant-flag t) nil [5051 5065])
+            ("OSERR_EAFNOSUPPORT" variable (:constant-flag t) nil [5091 5109])
+            ("OSERR_ENOPROTOOPT" variable (:constant-flag t) nil [5135 5152])
+            ("socklen_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [5398 5420])
+            ("PJ_SOCKADDR_SET_LEN" variable (:constant-flag t) nil [6347 6366])
+            ("PJ_SOCKADDR_RESET_LEN" variable (:constant-flag t) nil [6389 6410]))          
+      :file "socket.h"
+      :pointmax 6462
+      :fsize 6461
+      :lastmodtime '(23248 6457 217133 249000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__PJ_COMPAT_SOCKET_H__")
+          ("OSERR_ENOTCONN" . ((symbol "ENOTCONN" 5072 . 5080)))
+          ("PJ_SOCKADDR_RESET_LEN" (spp-arg-list ("addr") 6410 . 6416))
+          ("OSERR_EWOULDBLOCK" . ((symbol "EWOULDBLOCK" 4944 . 4955)))
+          ("PJ_SOCKADDR_SET_LEN" (spp-arg-list ("addr" "len") 6366 . 6376))
+          ("OSERR_EINPROGRESS" . ((symbol "EINPROGRESS" 4987 . 4998)))
+          ("OSERR_EAFNOSUPPORT" . ((symbol "EAFNOSUPPORT" 5112 . 5124)))
+          ("OSERR_ENOPROTOOPT" . ((symbol "ENOPROTOOPT" 5156 . 5167)))
+          ("OSERR_ECONNRESET" . ((symbol "ECONNRESET" 5030 . 5040)))
+          )
+)
+    (semanticdb-table "assert.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_ASSERT_H__" variable (:constant-flag t) nil [898 920])
+            ("assert" variable (:constant-flag t) nil [1117 1123]))          
+      :file "assert.h"
+      :pointmax 1175
+      :fsize 1174
+      :lastmodtime '(23248 6457 216465 441000)
+      :unmatched-syntax '((string 1077 . 1106) (symbol 1069 . 1076) (punctuation 1066 . 1067))
+      :lexical-table 
+        '(("assert" (spp-arg-list ("expr") 1123 . 1129))
+          ("__PJ_COMPAT_ASSERT_H__")
+          )
+)
+    (semanticdb-table "errno.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_ERRNO_H__" variable (:constant-flag t) nil [897 918]))          
+      :file "errno.h"
+      :pointmax 1528
+      :fsize 1527
+      :lastmodtime '(23248 6457 214374 365000)
+      :unmatched-syntax '((string 1425 . 1481) (symbol 1419 . 1424) (punctuation 1415 . 1416))
+      :lexical-table 
+        '(("__PJ_COMPAT_ERRNO_H__")
+          )
+)
+    (semanticdb-table "string.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_STRING_H__" variable (:constant-flag t) nil [898 920])
+            ("strcasecmp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1134 1149])
+                    ("s2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1150 1165]))                  
+                :type "int")
+                nil [1123 1166])
+            ("strncasecmp" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("s1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1196 1211])
+                    ("s2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1212 1227])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [1228 1236]))                  
+                :type "int")
+                nil [1184 1237])
+            ("stdio.h" include (:system-flag t) nil [1272 1290])
+            ("stricmp" variable (:constant-flag t) nil [1684 1691])
+            ("strnicmp" variable (:constant-flag t) nil [1714 1722])
+            ("pj_ansi_strcmp" variable (:constant-flag t) nil [1885 1899])
+            ("pj_ansi_strncmp" variable (:constant-flag t) nil [1916 1931])
+            ("pj_ansi_strlen" variable (:constant-flag t) nil [1949 1963])
+            ("pj_ansi_strcpy" variable (:constant-flag t) nil [1980 1994])
+            ("pj_ansi_strncpy" variable (:constant-flag t) nil [2011 2026])
+            ("pj_ansi_strcat" variable (:constant-flag t) nil [2044 2058])
+            ("pj_ansi_strstr" variable (:constant-flag t) nil [2075 2089])
+            ("pj_ansi_strchr" variable (:constant-flag t) nil [2106 2120])
+            ("pj_ansi_strcasecmp" variable (:constant-flag t) nil [2137 2155])
+            ("pj_ansi_stricmp" variable (:constant-flag t) nil [2175 2190])
+            ("pj_ansi_strncasecmp" variable (:constant-flag t) nil [2211 2230])
+            ("pj_ansi_strnicmp" variable (:constant-flag t) nil [2251 2267])
+            ("pj_ansi_sprintf" variable (:constant-flag t) nil [2288 2303])
+            ("pj_ansi_snprintf" variable (:constant-flag t) nil [2636 2652])
+            ("pj_ansi_vsprintf" variable (:constant-flag t) nil [2670 2686])
+            ("pj_ansi_vsnprintf" variable (:constant-flag t) nil [2704 2721])
+            ("pj_unicode_strcmp" variable (:constant-flag t) nil [2741 2758])
+            ("pj_unicode_strncmp" variable (:constant-flag t) nil [2774 2792])
+            ("pj_unicode_strlen" variable (:constant-flag t) nil [2809 2826])
+            ("pj_unicode_strcpy" variable (:constant-flag t) nil [2842 2859])
+            ("pj_unicode_strncpy" variable (:constant-flag t) nil [2875 2893])
+            ("pj_unicode_strcat" variable (:constant-flag t) nil [2910 2927])
+            ("pj_unicode_strstr" variable (:constant-flag t) nil [2943 2960])
+            ("pj_unicode_strchr" variable (:constant-flag t) nil [2976 2993])
+            ("pj_unicode_strcasecmp" variable (:constant-flag t) nil [3009 3030])
+            ("pj_unicode_stricmp" variable (:constant-flag t) nil [3047 3065])
+            ("pj_unicode_strncasecmp" variable (:constant-flag t) nil [3082 3104])
+            ("pj_unicode_strnicmp" variable (:constant-flag t) nil [3122 3141])
+            ("pj_unicode_sprintf" variable (:constant-flag t) nil [3159 3177])
+            ("pj_unicode_snprintf" variable (:constant-flag t) nil [3195 3214])
+            ("pj_unicode_vsprintf" variable (:constant-flag t) nil [3233 3252])
+            ("pj_unicode_vsnprintf" variable (:constant-flag t) nil [3271 3291])
+            ("pj_native_strcmp" variable (:constant-flag t) nil [4239 4255])
+            ("pj_native_strncmp" variable (:constant-flag t) nil [4286 4303])
+            ("pj_native_strlen" variable (:constant-flag t) nil [4335 4351])
+            ("pj_native_strcpy" variable (:constant-flag t) nil [4382 4398])
+            ("pj_native_strncpy" variable (:constant-flag t) nil [4429 4446])
+            ("pj_native_strcat" variable (:constant-flag t) nil [4478 4494])
+            ("pj_native_strstr" variable (:constant-flag t) nil [4525 4541])
+            ("pj_native_strchr" variable (:constant-flag t) nil [4572 4588])
+            ("pj_native_strcasecmp" variable (:constant-flag t) nil [4619 4639])
+            ("pj_native_stricmp" variable (:constant-flag t) nil [4674 4691])
+            ("pj_native_strncasecmp" variable (:constant-flag t) nil [4723 4744])
+            ("pj_native_strnicmp" variable (:constant-flag t) nil [4779 4797])
+            ("pj_native_sprintf" variable (:constant-flag t) nil [4830 4847])
+            ("pj_native_snprintf" variable (:constant-flag t) nil [4879 4897])
+            ("pj_native_vsprintf" variable (:constant-flag t) nil [4930 4948])
+            ("pj_native_vsnprintf" variable (:constant-flag t) nil [4981 5000]))          
+      :file "string.h"
+      :pointmax 5068
+      :fsize 5067
+      :lastmodtime '(23248 6457 218698 354000)
+      :unmatched-syntax '((semantic-list 1178 . 1183) (symbol 1171 . 1178) (semantic-list 1117 . 1122) (symbol 1110 . 1117))
+      :lexical-table 
+        '(("pj_ansi_strnicmp" . ((symbol "strncasecmp" 2268 . 2279)))
+          ("pj_native_strncmp" . ((symbol "pj_ansi_strncmp" 4308 . 4323)))
+          ("pj_native_snprintf" . ((symbol "pj_ansi_snprintf" 4902 . 4918)))
+          ("pj_ansi_strstr" . ((symbol "strstr" 2091 . 2097)))
+          ("pj_unicode_strncasecmp" . ((symbol "wcsnicmp" 3105 . 3113)))
+          ("pj_unicode_sprintf" . ((symbol "swprintf" 3178 . 3186)))
+          ("pj_native_strcmp" . ((symbol "pj_ansi_strcmp" 4260 . 4274)))
+          ("pj_native_strchr" . ((symbol "pj_ansi_strchr" 4593 . 4607)))
+          ("pj_native_strncasecmp" . ((symbol "pj_ansi_strncasecmp" 4748 . 4767)))
+          ("pj_native_vsprintf" . ((symbol "pj_ansi_vsprintf" 4953 . 4969)))
+          ("__PJ_COMPAT_STRING_H__")
+          ("strnicmp" . ((symbol "strncasecmp" 1723 . 1734)))
+          ("pj_ansi_stricmp" . ((symbol "strcasecmp" 2192 . 2202)))
+          ("pj_unicode_strncpy" . ((symbol "wcsncpy" 2894 . 2901)))
+          ("pj_unicode_strstr" . ((symbol "wcsstr" 2961 . 2967)))
+          ("pj_ansi_strcmp" . ((symbol "strcmp" 1901 . 1907)))
+          ("pj_ansi_strchr" . ((symbol "strchr" 2122 . 2128)))
+          ("pj_ansi_strcasecmp" . ((symbol "strcasecmp" 2156 . 2166)))
+          ("pj_native_strcasecmp" . ((symbol "pj_ansi_strcasecmp" 4644 . 4662)))
+          ("pj_unicode_strcmp" . ((symbol "wcscmp" 2759 . 2765)))
+          ("pj_unicode_strchr" . ((symbol "wcschr" 2994 . 3000)))
+          ("pj_native_strlen" . ((symbol "pj_ansi_strlen" 4356 . 4370)))
+          ("pj_native_sprintf" . ((symbol "pj_ansi_sprintf" 4852 . 4867)))
+          ("pj_unicode_stricmp" . ((symbol "wcsicmp" 3066 . 3073)))
+          ("pj_unicode_snprintf" . ((symbol "snwprintf" 3215 . 3224)))
+          ("pj_native_strncpy" . ((symbol "pj_ansi_strncpy" 4451 . 4466)))
+          ("pj_native_vsnprintf" . ((symbol "pj_ansi_vsnprintf" 5005 . 5022)))
+          ("pj_ansi_strlen" . ((symbol "strlen" 1965 . 1971)))
+          ("pj_unicode_vsprintf" . ((symbol "vswprintf" 3253 . 3262)))
+          ("pj_native_strcpy" . ((symbol "pj_ansi_strcpy" 4403 . 4417)))
+          ("pj_native_strnicmp" . ((symbol "pj_ansi_strnicmp" 4802 . 4818)))
+          ("pj_ansi_strncmp" . ((symbol "strncmp" 1933 . 1940)))
+          ("pj_ansi_strncasecmp" . ((symbol "strncasecmp" 2231 . 2242)))
+          ("pj_ansi_snprintf" . ((symbol "snprintf" 2653 . 2661)))
+          ("pj_unicode_strlen" . ((symbol "wcslen" 2827 . 2833)))
+          ("pj_ansi_strcpy" . ((symbol "strcpy" 1996 . 2002)))
+          ("pj_ansi_vsprintf" . ((symbol "vsprintf" 2687 . 2695)))
+          ("pj_unicode_vsnprintf" . ((symbol "vsnwprintf" 3292 . 3302)))
+          ("pj_native_strcat" . ((symbol "pj_ansi_strcat" 4499 . 4513)))
+          ("pj_native_stricmp" . ((symbol "pj_ansi_stricmp" 4696 . 4711)))
+          ("pj_unicode_strcpy" . ((symbol "wcscpy" 2860 . 2866)))
+          ("pj_ansi_strcat" . ((symbol "strcat" 2060 . 2066)))
+          ("pj_unicode_strncmp" . ((symbol "wcsncmp" 2793 . 2800)))
+          ("stricmp" . ((symbol "strcasecmp" 1692 . 1702)))
+          ("pj_ansi_sprintf" . ((symbol "sprintf" 2305 . 2312)))
+          ("pj_ansi_vsnprintf" . ((symbol "vsnprintf" 2722 . 2731)))
+          ("pj_unicode_strcat" . ((symbol "wcscat" 2928 . 2934)))
+          ("pj_unicode_strnicmp" . ((symbol "wcsnicmp" 3142 . 3150)))
+          ("pj_ansi_strncpy" . ((symbol "strncpy" 2028 . 2035)))
+          ("pj_unicode_strcasecmp" . ((symbol "wcsicmp" 3031 . 3038)))
+          ("pj_native_strstr" . ((symbol "pj_ansi_strstr" 4546 . 4560)))
+          )
+)
+    (semanticdb-table "cc_gcc.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_CC_GCC_H__" variable (:constant-flag t) nil [898 920])
+            ("PJ_CC_NAME" variable (:constant-flag t) nil [1064 1074])
+            ("PJ_CC_VER_1" variable (:constant-flag t) nil [1090 1101])
+            ("PJ_CC_VER_2" variable (:constant-flag t) nil [1120 1131])
+            ("PJ_CC_VER_3" variable (:constant-flag t) nil [1241 1252])
+            ("PJ_THREAD_FUNC" variable (:constant-flag t) nil [1324 1338])
+            ("PJ_NORETURN" variable (:constant-flag t) nil [1348 1359])
+            ("PJ_HAS_INT64" variable (:constant-flag t) nil [1371 1383])
+            ("pj_int64_t" type
+               (:typedef ("long long")
+                :type "typedef")
+                nil [1611 1641])
+            ("pj_uint64_t" type
+               (:typedef ("unsigned long long")
+                :type "typedef")
+                nil [1644 1683])
+            ("PJ_INLINE_SPECIFIER" variable (:constant-flag t) nil [1694 1713])
+            ("PJ_ATTR_NORETURN" variable (:constant-flag t) nil [1738 1754])
+            ("PJ_ATTR_MAY_ALIAS" variable (:constant-flag t) nil [1792 1809])
+            ("PJ_INT64" variable (:constant-flag t) nil [1857 1865])
+            ("PJ_UINT64" variable (:constant-flag t) nil [1888 1897])
+            ("PJ_INT64_FMT" variable (:constant-flag t) nil [1921 1933])
+            ("PJ_UNREACHED" variable (:constant-flag t) nil [2001 2013])
+            ("PJ_ALIGN_DATA" variable (:constant-flag t) nil [2032 2045]))          
+      :file "cc_gcc.h"
+      :pointmax 2158
+      :fsize 2157
+      :lastmodtime '(23248 6457 216753 179000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PJ_CC_VER_2" . ((symbol "__GNUC_MINOR__" 1133 . 1147)))
+          ("PJ_CC_VER_3" . ((symbol "__GNUC_PATCHLEVEL__" 1254 . 1273)))
+          ("PJ_UINT64" (spp-arg-list ("val") 1897 . 1902) . ((spp-symbol-merge ((symbol "val" 1904 . 1907) (symbol "ULL" 1909 . 1912)) 1904 . 1912)))
+          ("PJ_ATTR_NORETURN" . ((symbol "__attribute__" 1755 . 1768) (semantic-list "((noreturn))" 1769 . 1781)))
+          ("PJ_INT64_FMT" . ((string "\"L\"" 1935 . 1938)))
+          ("PJ_HAS_INT64" . ((number "1" 1385 . 1386)))
+          ("PJ_ATTR_MAY_ALIAS" . ((symbol "__attribute__" 1810 . 1823) (semantic-list "((__may_alias__))" 1823 . 1840)))
+          ("PJ_INT64" (spp-arg-list ("val") 1865 . 1870) . ((spp-symbol-merge ((symbol "val" 1872 . 1875) (symbol "LL" 1877 . 1879)) 1872 . 1879)))
+          ("__PJ_COMPAT_CC_GCC_H__")
+          ("PJ_INLINE_SPECIFIER" . ((STATIC "static" 1714 . 1720) (INLINE "inline" 1721 . 1727)))
+          ("PJ_ALIGN_DATA" (spp-arg-list ("declaration" "alignment") 2045 . 2069) . 
+              ((symbol "declaration" 2070 . 2081) (symbol "__attribute__" 2082 . 2095) (semantic-list "((aligned (alignment)))" 2095 . 2118)))
+          ("PJ_CC_NAME" . ((string "\"gcc\"" 1076 . 1081)))
+          ("PJ_UNREACHED" (spp-arg-list ("x") 2013 . 2016))
+          ("PJ_CC_VER_1" . ((symbol "__GNUC__" 1103 . 1111)))
+          ("PJ_THREAD_FUNC")
+          ("PJ_NORETURN")
+          )
+)
+    (semanticdb-table "os_darwinos.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_OS_DARWINOS_H__" variable (:constant-flag t) nil [903 930])
+            ("PJ_OS_NAME" variable (:constant-flag t) nil [1034 1044])
+            ("PJ_HAS_ARPA_INET_H" variable (:constant-flag t) nil [1068 1086])
+            ("PJ_HAS_ASSERT_H" variable (:constant-flag t) nil [1101 1116])
+            ("PJ_HAS_CTYPE_H" variable (:constant-flag t) nil [1132 1146])
+            ("PJ_HAS_ERRNO_H" variable (:constant-flag t) nil [1162 1176])
+            ("PJ_HAS_LINUX_SOCKET_H" variable (:constant-flag t) nil [1192 1213])
+            ("PJ_HAS_MALLOC_H" variable (:constant-flag t) nil [1228 1243])
+            ("PJ_HAS_NETDB_H" variable (:constant-flag t) nil [1259 1273])
+            ("PJ_HAS_NETINET_IN_H" variable (:constant-flag t) nil [1289 1308])
+            ("PJ_HAS_NETINET_TCP_H" variable (:constant-flag t) nil [1323 1343])
+            ("PJ_HAS_SETJMP_H" variable (:constant-flag t) nil [1358 1373])
+            ("PJ_HAS_STDARG_H" variable (:constant-flag t) nil [1389 1404])
+            ("PJ_HAS_STDDEF_H" variable (:constant-flag t) nil [1420 1435])
+            ("PJ_HAS_STDIO_H" variable (:constant-flag t) nil [1451 1465])
+            ("PJ_HAS_STDLIB_H" variable (:constant-flag t) nil [1481 1496])
+            ("PJ_HAS_STRING_H" variable (:constant-flag t) nil [1512 1527])
+            ("PJ_HAS_SYS_IOCTL_H" variable (:constant-flag t) nil [1543 1561])
+            ("PJ_HAS_SYS_SELECT_H" variable (:constant-flag t) nil [1576 1595])
+            ("PJ_HAS_SYS_SOCKET_H" variable (:constant-flag t) nil [1610 1629])
+            ("PJ_HAS_SYS_TIME_H" variable (:constant-flag t) nil [1644 1661])
+            ("PJ_HAS_SYS_TIMEB_H" variable (:constant-flag t) nil [1676 1694])
+            ("PJ_HAS_SYS_TYPES_H" variable (:constant-flag t) nil [1709 1727])
+            ("PJ_HAS_TIME_H" variable (:constant-flag t) nil [1742 1755])
+            ("PJ_HAS_UNISTD_H" variable (:constant-flag t) nil [1771 1786])
+            ("PJ_HAS_MSWSOCK_H" variable (:constant-flag t) nil [1803 1819])
+            ("PJ_HAS_WINSOCK_H" variable (:constant-flag t) nil [1834 1850])
+            ("PJ_HAS_WINSOCK2_H" variable (:constant-flag t) nil [1865 1882])
+            ("PJ_HAS_LOCALTIME_R" variable (:constant-flag t) nil [1898 1916])
+            ("PJ_HAS_ERRNO_VAR" variable (:constant-flag t) nil [1982 1998])
+            ("PJ_SOCK_HAS_INET_ATON" variable (:constant-flag t) nil [2042 2063])
+            ("PJ_HAS_SO_ERROR" variable (:constant-flag t) nil [2206 2221])
+            ("PJ_BLOCKING_ERROR_VAL" variable (:constant-flag t) nil [2375 2396])
+            ("PJ_BLOCKING_CONNECT_ERROR_VAL" variable (:constant-flag t) nil [2560 2589])
+            ("PJ_HAS_THREADS" variable (:constant-flag t) nil [2698 2712])
+            ("PJ_HAS_HIGH_RES_TIMER" variable (:constant-flag t) nil [2734 2755])
+            ("PJ_HAS_MALLOC" variable (:constant-flag t) nil [2767 2780])
+            ("PJ_OS_HAS_CHECK_STACK" variable (:constant-flag t) nil [2826 2847])
+            ("PJ_NATIVE_STRING_IS_UNICODE" variable (:constant-flag t) nil [2872 2899])
+            ("PJ_ATOMIC_VALUE_TYPE" variable (:constant-flag t) nil [2911 2931])
+            ("PJ_SOCKADDR_HAS_LEN" variable (:constant-flag t) nil [3017 3036])
+            ("PJ_IOQUEUE_MAX_HANDLES" variable (:constant-flag t) nil [3287 3309])
+            ("PJ_SELECT_NEEDS_NFDS" variable (:constant-flag t) nil [3698 3718])
+            ("PJ_EMULATE_RWMUTEX" variable (:constant-flag t) nil [3810 3828])
+            ("PJ_THREAD_SET_STACK_SIZE" variable (:constant-flag t) nil [3985 4009])
+            ("PJ_THREAD_ALLOCATE_STACK" variable (:constant-flag t) nil [4162 4186])
+            ("PJ_HAS_SOCKLEN_T" variable (:constant-flag t) nil [4241 4257]))          
+      :file "os_darwinos.h"
+      :pointmax 4305
+      :fsize 4304
+      :lastmodtime '(23248 6457 209801 86000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PJ_HAS_ARPA_INET_H" . ((number "1" 1091 . 1092)))
+          ("PJ_SELECT_NEEDS_NFDS" . ((number "0" 3720 . 3721)))
+          ("PJ_THREAD_SET_STACK_SIZE" . ((number "0" 4014 . 4015)))
+          ("PJ_HAS_ERRNO_H" . ((number "1" 1182 . 1183)))
+          ("PJ_HAS_LINUX_SOCKET_H" . ((number "0" 1218 . 1219)))
+          ("PJ_HAS_SYS_SELECT_H" . ((number "1" 1600 . 1601)))
+          ("PJ_HAS_UNISTD_H" . ((number "1" 1792 . 1793)))
+          ("PJ_EMULATE_RWMUTEX" . ((number "0" 3830 . 3831)))
+          ("PJ_THREAD_ALLOCATE_STACK" . ((number "0" 4191 . 4192)))
+          ("PJ_HAS_CTYPE_H" . ((number "1" 1152 . 1153)))
+          ("PJ_HAS_SYS_SOCKET_H" . ((number "1" 1634 . 1635)))
+          ("PJ_HAS_SYS_TIMEB_H" . ((number "1" 1699 . 1700)))
+          ("PJ_HAS_SETJMP_H" . ((number "1" 1379 . 1380)))
+          ("PJ_HAS_SYS_IOCTL_H" . ((number "1" 1566 . 1567)))
+          ("PJ_NATIVE_STRING_IS_UNICODE" . ((number "0" 2900 . 2901)))
+          ("PJ_HAS_LOCALTIME_R" . ((number "1" 1921 . 1922)))
+          ("PJ_HAS_SO_ERROR" . ((number "1" 2234 . 2235)))
+          ("PJ_IOQUEUE_MAX_HANDLES" . ((number "1024" 3311 . 3315)))
+          ("PJ_HAS_STDARG_H" . ((number "1" 1410 . 1411)))
+          ("PJ_HAS_STDDEF_H" . ((number "1" 1441 . 1442)))
+          ("PJ_BLOCKING_CONNECT_ERROR_VAL" . ((symbol "EINPROGRESS" 2592 . 2603)))
+          ("PJ_HAS_ASSERT_H" . ((number "1" 1122 . 1123)))
+          ("PJ_HAS_NETDB_H" . ((number "1" 1279 . 1280)))
+          ("PJ_HAS_SYS_TIME_H" . ((number "1" 1666 . 1667)))
+          ("PJ_HAS_TIME_H" . ((number "1" 1761 . 1762)))
+          ("PJ_HAS_WINSOCK2_H" . ((number "0" 1887 . 1888)))
+          ("PJ_HAS_MALLOC" . ((number "1" 2783 . 2784)))
+          ("PJ_SOCKADDR_HAS_LEN" . ((number "1" 3038 . 3039)))
+          ("PJ_HAS_NETINET_IN_H" . ((number "1" 1313 . 1314)))
+          ("PJ_HAS_THREADS" . ((semantic-list "(1)" 2714 . 2717)))
+          ("PJ_OS_HAS_CHECK_STACK" . ((number "0" 2855 . 2856)))
+          ("PJ_HAS_SOCKLEN_T" . ((number "1" 4259 . 4260)))
+          ("__PJ_COMPAT_OS_DARWINOS_H__")
+          ("PJ_HAS_MALLOC_H" . ((number "0" 1249 . 1250)))
+          ("PJ_HAS_STRING_H" . ((number "1" 1533 . 1534)))
+          ("PJ_BLOCKING_ERROR_VAL" . ((symbol "EWOULDBLOCK" 2403 . 2414)))
+          ("PJ_HAS_HIGH_RES_TIMER" . ((number "1" 2757 . 2758)))
+          ("PJ_ATOMIC_VALUE_TYPE" . ((LONG "long" 2933 . 2937)))
+          ("PJ_HAS_SYS_TYPES_H" . ((number "1" 1732 . 1733)))
+          ("PJ_HAS_STDLIB_H" . ((number "1" 1502 . 1503)))
+          ("PJ_OS_NAME" . ((string "\"darwin\"" 1050 . 1058)))
+          ("PJ_HAS_WINSOCK_H" . ((number "0" 1855 . 1856)))
+          ("PJ_SOCK_HAS_INET_ATON" . ((number "1" 2068 . 2069)))
+          ("PJ_HAS_NETINET_TCP_H" . ((number "1" 1348 . 1349)))
+          ("PJ_HAS_STDIO_H" . ((number "1" 1471 . 1472)))
+          ("PJ_HAS_MSWSOCK_H" . ((number "0" 1824 . 1825)))
+          ("PJ_HAS_ERRNO_VAR" . ((number "1" 2003 . 2004)))
+          )
+)
+    (semanticdb-table "size_t.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__PJ_COMPAT_SIZE_T_H__" variable (:constant-flag t) nil [898 920]))          
+      :file "size_t.h"
+      :pointmax 1066
+      :fsize 1065
+      :lastmodtime '(23248 6457 215034 820000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__PJ_COMPAT_SIZE_T_H__")
+          )
+))
+  :file "!usr!local!include!pj!compat!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

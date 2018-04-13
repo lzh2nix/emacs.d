@@ -1,0 +1,668 @@
+;; Object pjsip/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pjsip/"
+  :tables
+  (list
+    (semanticdb-table "sip_endpoint.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pjsip/sip_endpoint.h" include (:system-flag t) nil [859 890])
+            ("pjsip/sip_transaction.h" include (:system-flag t) nil [891 925])
+            ("pjsip/sip_private.h" include (:system-flag t) nil [926 956])
+            ("pjsip/sip_event.h" include (:system-flag t) nil [957 985])
+            ("pjsip/sip_resolve.h" include (:system-flag t) nil [986 1016])
+            ("pjsip/sip_module.h" include (:system-flag t) nil [1017 1046])
+            ("pjsip/sip_util.h" include (:system-flag t) nil [1047 1074])
+            ("pjsip/sip_errno.h" include (:system-flag t) nil [1075 1103])
+            ("pj/except.h" include (:system-flag t) nil [1104 1126])
+            ("pj/log.h" include (:system-flag t) nil [1127 1146])
+            ("pj/string.h" include (:system-flag t) nil [1147 1169])
+            ("pj/os.h" include (:system-flag t) nil [1170 1188])
+            ("pj/pool.h" include (:system-flag t) nil [1189 1209])
+            ("pj/hash.h" include (:system-flag t) nil [1210 1230])
+            ("pj/assert.h" include (:system-flag t) nil [1231 1253])
+            ("pj/errno.h" include (:system-flag t) nil [1254 1275])
+            ("pj/lock.h" include (:system-flag t) nil [1276 1296])
+            ("pj/math.h" include (:system-flag t) nil [1297 1317])
+            ("PJSIP_EX_NO_MEMORY" variable (:constant-flag t) nil [1327 1345])
+            ("THIS_FILE" variable (:constant-flag t) nil [1380 1389])
+            ("MAX_METHODS" variable (:constant-flag t) nil [1420 1431])
+            ("exit_cb" type
+               (:members 
+                  ( ("PJ_DECL_LIST_MEMBER" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("exit_cb" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil)) (reparse-symbol arg-sub-list) [1536 1551]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1510 1552])
+                    ("func" variable (:type ("pjsip_endpt_exit_callback" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1557 1592]))                  
+                :type "struct")
+                nil [1481 1603])
+            ("exit_cb" type
+               (:typedef ("exit_cb" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [1481 1603])
+            ("pjsip_endpoint" type
+               (:members 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1716 1733])
+                    ("mutex" variable
+                       (:pointer 1
+                        :type ("pj_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1804 1823])
+                    ("pf" variable
+                       (:pointer 1
+                        :type ("pj_pool_factory" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1854 1874])
+                    ("name" variable (:type ("pj_str_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1897 1913])
+                    ("timer_heap" variable
+                       (:pointer 1
+                        :type ("pj_timer_heap_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1942 1970])
+                    ("transport_mgr" variable
+                       (:pointer 1
+                        :type ("pjsip_tpmgr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2006 2034])
+                    ("ioqueue" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2060 2082])
+                    ("ioq_last_err" variable (:type ("pj_status_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2116 2143])
+                    ("resolver" variable
+                       (:pointer 1
+                        :type ("pjsip_resolver_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2174 2201])
+                    ("mod_mutex" variable
+                       (:pointer 1
+                        :type ("pj_rwmutex_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2232 2256])
+                    ("modules" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2282 2329])
+                    ("module_list" variable (:type ("pjsip_module" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2379 2405])
+                    ("cap_hdr" variable (:type ("pjsip_hdr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2446 2466])
+                    ("req_hdr" variable (:type ("pjsip_hdr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2511 2531])
+                    ("exit_cb_list" variable (:type ("exit_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2571 2594]))                  
+                :type "struct")
+                nil [1635 2597])
+            ("LOCK_MODULE_ACCESS" variable (:constant-flag t) nil [2820 2838])
+            ("UNLOCK_MODULE_ACCESS" variable (:constant-flag t) nil [2857 2877])
+            ("endpt_on_rx_msg" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2946 2962])
+                    ("" variable (:type ("pj_status_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2972 2984])
+                    ("" variable
+                       (:pointer 1
+                        :type ("pjsip_rx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2985 3000]))                  
+                :type "void")
+                nil [2917 3001])
+            ("endpt_on_tx_msg" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3038 3060])
+                    ("tdata" variable
+                       (:pointer 1
+                        :type ("pjsip_tx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3069 3091]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [3002 3092])
+            ("unload_module" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3126 3148])
+                    ("mod" variable
+                       (:pointer 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3154 3172]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [3093 3173])
+            ("init_sip_parser" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3226 3231]))                  
+                :type "void")
+                nil [3205 3232])
+            ("deinit_sip_parser" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3256 3261]))                  
+                :type "void")
+                nil [3233 3262])
+            ("pjsip_tel_uri_subsys_init" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3333 3338]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [3295 3339])
+            ("pool_callback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3668 3684])
+                    ("size" variable (:type ("pj_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3685 3701]))                  
+                :type "void")
+                nil [3641 3790])
+            ("cmp_mod_name" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3885 3896])
+                    ("mod" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3897 3913]))                  
+                :type "int")
+                nil [3861 3992])
+            ("pjsip_endpt_register_module" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4252 4274])
+                    ("mod" variable
+                       (:pointer 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4282 4301]))                  
+                :type "int")
+                nil [4223 5923])
+            ("pjsip_endpt_unregister_module" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6136 6158])
+                    ("mod" variable
+                       (:pointer 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6168 6187]))                  
+                :type "int")
+                nil [6105 7166])
+            ("unload_module" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7201 7223])
+                    ("mod" variable
+                       (:pointer 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7229 7247]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [7168 7843])
+            ("pjsip_endpt_get_capability" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7965 7987])
+                    ("htype" variable (:type "int") (reparse-symbol arg-sub-list) [7999 8009])
+                    ("hname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8021 8043]))                  
+                :type "int")
+                nil [7937 8381])
+            ("pjsip_endpt_has_capability" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8488 8510])
+                    ("htype" variable (:type "int") (reparse-symbol arg-sub-list) [8522 8532])
+                    ("hname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8544 8566])
+                    ("token" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8578 8600]))                  
+                :type "int")
+                nil [8460 8965])
+            ("pjsip_endpt_add_capability" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9136 9158])
+                    ("mod" variable
+                       (:pointer 1
+                        :type ("pjsip_module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9165 9183])
+                    ("htype" variable (:type "int") (reparse-symbol arg-sub-list) [9190 9200])
+                    ("hname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9207 9229])
+                    ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9236 9251])
+                    ("tags" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9258 9280]))                  
+                :type "int")
+                nil [9108 10420])
+            ("pjsip_endpt_get_request_headers" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10551 10573]))                  
+                :type "int")
+                nil [10519 10605])
+            ("pjsip_endpt_create" function
+               (:arguments 
+                  ( ("pf" variable
+                       (:pointer 1
+                        :type ("pj_pool_factory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10678 10698])
+                    ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10710 10727])
+                    ("p_endpt" variable
+                       (:pointer 2
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10767 10792]))                  
+                :type "int")
+                nil [10659 14601])
+            ("pjsip_endpt_destroy" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14664 14686]))                  
+                :type "int")
+                nil [14644 16066])
+            ("pjsip_endpt_name" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16138 16166]))                  
+                :type "int")
+                nil [16121 16195])
+            ("pjsip_endpt_create_pool" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16269 16291])
+                    ("pool_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16304 16326])
+                    ("initial" variable (:type ("pj_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16339 16357])
+                    ("increment" variable (:type ("pj_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16370 16391]))                  
+                :type "int")
+                nil [16244 16887])
+            ("pjsip_endpt_release_pool" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17021 17043])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17044 17061]))                  
+                :type "int")
+                nil [16995 17360])
+            ("pjsip_endpt_handle_events2" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17410 17432])
+                    ("max_timeout" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_time_val" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17445 17476])
+                    ("p_count" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [17489 17507]))                  
+                :type "int")
+                nil [17383 19674])
+            ("pjsip_endpt_handle_events" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19747 19769])
+                    ("max_timeout" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_time_val" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19781 19812]))                  
+                :type "int")
+                nil [19721 19881])
+            ("pjsip_endpt_schedule_timer" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20432 20454])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("pj_timer_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20461 20483])
+                    ("delay" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_time_val" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20490 20516]))                  
+                :type "int")
+                nil [20404 20707])
+            ("pjsip_endpt_cancel_timer" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20805 20827])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("pj_timer_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20840 20863]))                  
+                :type "int")
+                nil [20779 20994])
+            ("pjsip_endpt_get_timer_heap" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21107 21129]))                  
+                :type "int")
+                nil [21080 21163])
+            ("pjsip_process_rdata_param_default" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("pjsip_process_rdata_param" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21236 21265]))                  
+                :type "int")
+                nil [21202 21298])
+            ("pjsip_endpt_process_rx_data" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21372 21394])
+                    ("rdata" variable
+                       (:pointer 1
+                        :type ("pjsip_rx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21444 21465])
+                    ("p" variable
+                       (:pointer 1
+                        :type ("pjsip_process_rdata_param" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21515 21544])
+                    ("p_handled" variable
+                       (:pointer 1
+                        :type ("pj_bool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21594 21615]))                  
+                :type "int")
+                nil [21343 23390])
+            ("endpt_on_rx_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23541 23563])
+                    ("status" variable (:type ("pj_status_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23572 23591])
+                    ("rdata" variable
+                       (:pointer 1
+                        :type ("pjsip_rx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23600 23622]))                  
+                :type "void")
+                nil [23512 27530])
+            ("endpt_on_tx_msg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27709 27731])
+                    ("tdata" variable
+                       (:pointer 1
+                        :type ("pjsip_tx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27740 27762]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [27673 28441])
+            ("pjsip_endpt_create_tdata" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28530 28552])
+                    ("p_tdata" variable
+                       (:pointer 2
+                        :type ("pjsip_tx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28565 28589]))                  
+                :type "int")
+                nil [28503 28657])
+            ("pjsip_endpt_create_resolver" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28752 28774])
+                    ("p_resv" variable
+                       (:pointer 2
+                        :type ("pj_dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28781 28806]))                  
+                :type "int")
+                nil [28724 29145])
+            ("pjsip_endpt_set_resolver" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29252 29274])
+                    ("resv" variable
+                       (:pointer 1
+                        :type ("pj_dns_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29286 29308]))                  
+                :type "int")
+                nil [29226 29375])
+            ("pjsip_endpt_set_ext_resolver" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29509 29531])
+                    ("ext_res" variable
+                       (:pointer 1
+                        :type ("pjsip_ext_resolver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29539 29567]))                  
+                :type "int")
+                nil [29480 29641])
+            ("pjsip_endpt_get_resolver" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29756 29778]))                  
+                :type "int")
+                nil [29731 29874])
+            ("pjsip_endpt_resolve" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29928 29950])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29957 29973])
+                    ("target" variable
+                       (:pointer 1
+                        :type ("pjsip_host_info" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29980 30004])
+                    ("token" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30011 30023])
+                    ("cb" variable
+                       (:pointer 1
+                        :type ("pjsip_resolver_callback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30030 30058]))                  
+                :type "int")
+                nil [29907 30124])
+            ("pjsip_endpt_get_tpmgr" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30202 30224]))                  
+                :type "int")
+                nil [30180 30261])
+            ("pjsip_endpt_get_ioqueue" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30341 30363]))                  
+                :type "int")
+                nil [30317 30394])
+            ("pjsip_endpt_acquire_transport" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30479 30501])
+                    ("type" variable (:type ("pjsip_transport_type_e" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30510 30538])
+                    ("remote" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_sockaddr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30547 30575])
+                    ("addr_len" variable (:type "int") (reparse-symbol arg-sub-list) [30584 30597])
+                    ("sel" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pjsip_tpselector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30606 30634])
+                    ("transport" variable
+                       (:pointer 2
+                        :type ("pjsip_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30643 30671]))                  
+                :type "int")
+                nil [30449 30786])
+            ("pjsip_endpt_acquire_transport2" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30873 30895])
+                    ("type" variable (:type ("pjsip_transport_type_e" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30905 30933])
+                    ("remote" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_sockaddr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30943 30971])
+                    ("addr_len" variable (:type "int") (reparse-symbol arg-sub-list) [30981 30994])
+                    ("sel" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pjsip_tpselector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31004 31032])
+                    ("tdata" variable
+                       (:pointer 1
+                        :type ("pjsip_tx_data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31042 31063])
+                    ("transport" variable
+                       (:pointer 2
+                        :type ("pjsip_transport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31073 31101]))                  
+                :type "int")
+                nil [30842 31225])
+            ("pjsip_endpt_log_error" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31289 31311])
+                    ("sender" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31321 31340])
+                    ("error_code" variable (:type ("pj_status_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31378 31401])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31439 31458])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [31496 31501]))                  
+                :type "int")
+                nil [31265 32287])
+            ("pjsip_endpt_dump" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32346 32368])
+                    ("detail" variable (:type ("pj_bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32369 32387]))                  
+                :type "int")
+                nil [32328 33496])
+            ("pjsip_endpt_atexit" function
+               (:arguments 
+                  ( ("endpt" variable
+                       (:pointer 1
+                        :type ("pjsip_endpoint" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33539 33561])
+                    ("func" variable (:type ("pjsip_endpt_exit_callback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33567 33598]))                  
+                :type "int")
+                nil [33519 33897]))          
+      :file "sip_endpoint.c"
+      :pointmax 33898
+      :fsize 33897
+      :lastmodtime '(23247 6399 573657 193000)
+      :unmatched-syntax '((semantic-list 33505 . 33518) (symbol 33499 . 33505) (semantic-list 32321 . 32327) (symbol 32315 . 32321) (semantic-list 31258 . 31264) (symbol 31252 . 31258) (semantic-list 30828 . 30841) (symbol 30822 . 30828) (semantic-list 30435 . 30448) (symbol 30429 . 30435) (semantic-list 30301 . 30316) (symbol 30295 . 30301) (semantic-list 30165 . 30179) (symbol 30159 . 30165) (semantic-list 29900 . 29906) (symbol 29894 . 29900) (semantic-list 29712 . 29730) (symbol 29706 . 29712) (semantic-list 29466 . 29479) (symbol 29460 . 29466) (semantic-list 29212 . 29225) (symbol 29206 . 29212) (semantic-list 28710 . 28723) (symbol 28704 . 28710) (semantic-list 28489 . 28502) (symbol 28483 . 28489) (semantic-list 21329 . 21342) (symbol 21323 . 21329) (semantic-list 21195 . 21201) (symbol 21189 . 21195) (semantic-list 21061 . 21079) (symbol 21055 . 21061) (semantic-list 20772 . 20778) (symbol 20766 . 20772) (semantic-list 20390 . 20403) (symbol 20384 . 20390) (semantic-list 19707 . 19720) (symbol 19701 . 19707) (semantic-list 17369 . 17382) (symbol 17363 . 17369) (semantic-list 16988 . 16994) (symbol 16982 . 16988) (semantic-list 16231 . 16243) (symbol 16225 . 16231) (semantic-list 16103 . 16120) (symbol 16097 . 16103) (semantic-list 14637 . 14643) (symbol 14631 . 14637) (semantic-list 10645 . 10658) (symbol 10639 . 10645) (semantic-list 10500 . 10518) (symbol 10494 . 10500) (semantic-list 9094 . 9107) (symbol 9088 . 9094) (semantic-list 8448 . 8459) (symbol 8442 . 8448) (semantic-list 7918 . 7936) (symbol 7912 . 7918) (semantic-list 6091 . 6104) (symbol 6085 . 6091) (semantic-list 4209 . 4222) (symbol 4203 . 4209))
+      :lexical-table 
+        '(("MAX_METHODS" . ((number "32" 1434 . 1436)))
+          ("UNLOCK_MODULE_ACCESS" (spp-arg-list ("endpt") 2877 . 2884))
+          ("THIS_FILE" . ((string "\"sip_endpoint.c\"" 1394 . 1410)))
+          ("PJSIP_EX_NO_MEMORY" . ((symbol "pj_NO_MEMORY_EXCEPTION" 1347 . 1369) (semantic-list "()" 1369 . 1371)))
+          ("LOCK_MODULE_ACCESS" (spp-arg-list ("endpt") 2838 . 2845))
+          )
+))
+  :file "!Users!lizhengqian!github!pjproject!pjsip!src!pjsip!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

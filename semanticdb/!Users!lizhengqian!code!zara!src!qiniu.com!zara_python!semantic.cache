@@ -1,0 +1,49 @@
+;; Object zara_python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zara_python/"
+  :tables
+  (list
+    (semanticdb-table "thread.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threading" include nil nil [1 23])
+            ("time" include nil nil [1 23])
+            ("cv2" include nil nil [24 34])
+            ("datetime" include nil nil [35 50])
+            ("face_recognition" include nil nil [51 74])
+            ("pika" include nil nil [75 86])
+            ("sys" include nil nil [87 97])
+            ("os" include nil nil [98 107])
+            ("url" variable nil nil [175 222])
+            ("cap" variable nil nil [223 250])
+            ("scale" variable nil nil [279 288])
+            ("threadLock" variable nil nil [289 318])
+            ("stream_dict" variable nil nil [319 339])
+            ("connection" variable nil nil [341 422])
+            ("channel" variable nil nil [423 453])
+            ("get_image_from_stream" function (:arguments 
+              ( ("cap" variable nil (reparse-symbol function_parameters) [481 484]))              ) nil [455 1305])
+            ("face_detect" function nil nil [1351 1977])
+            ("print" code nil nil [1978 2044])
+            ("t" variable nil nil [2046 2110])
+            ("t" code nil nil [2111 2120])
+            ("channel" code nil nil [2171 2310])
+            ("result" variable nil nil [2312 2358])
+            ("channel" code nil nil [2359 2482])
+            ("callback" function (:arguments 
+              ( ("ch" variable nil (reparse-symbol function_parameters) [2497 2499])
+                ("method" variable nil (reparse-symbol function_parameters) [2501 2507])
+                ("properties" variable nil (reparse-symbol function_parameters) [2509 2519])
+                ("body" variable nil (reparse-symbol function_parameters) [2521 2525]))              ) nil [2484 2707])
+            ("channel" code nil nil [2708 2778])
+            ("channel" code nil nil [2780 2805])
+            ("t" code nil nil [2807 2815])
+            ("print" code nil nil [2816 2875]))          
+      :file "thread.py"
+      :pointmax 2876
+      :fsize 2875
+      :lastmodtime '(23241 65381 935941 900000)
+      :unmatched-syntax nil))
+  :file "!Users!lizhengqian!code!zara!src!qiniu.com!zara_python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

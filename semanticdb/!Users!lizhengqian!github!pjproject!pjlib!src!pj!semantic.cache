@@ -1,0 +1,748 @@
+;; Object pj/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pj/"
+  :tables
+  (list
+    (semanticdb-table "hash.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pj/hash.h" include (:system-flag t) nil [859 879])
+            ("pj/log.h" include (:system-flag t) nil [880 899])
+            ("pj/string.h" include (:system-flag t) nil [900 922])
+            ("pj/pool.h" include (:system-flag t) nil [923 943])
+            ("pj/os.h" include (:system-flag t) nil [944 962])
+            ("pj/ctype.h" include (:system-flag t) nil [963 984])
+            ("pj/assert.h" include (:system-flag t) nil [985 1007])
+            ("PJ_HASH_MULTIPLIER" variable (:constant-flag t) nil [1078 1096])
+            ("pj_hash_entry" type
+               (:members 
+                  ( ("next" variable
+                       (:pointer 1
+                        :type ("pj_hash_entry" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1129 1156])
+                    ("key" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1161 1171])
+                    ("hash" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1176 1193])
+                    ("keylen" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1198 1217])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1222 1234]))                  
+                :type "struct")
+                nil [1102 1237])
+            ("pj_hash_table_t" type
+               (:members 
+                  ( ("table" variable
+                       (:pointer 2
+                        :type ("pj_hash_entry" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1269 1295])
+                    ("count" variable (:type "unsigned int") (reparse-symbol classsubparts) [1300 1322])
+                    ("rows" variable (:type "unsigned int") (reparse-symbol classsubparts) [1300 1322])
+                    ("iterator" variable (:type ("pj_hash_iterator_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1327 1355]))                  
+                :type "struct")
+                nil [1240 1358])
+            ("pj_hash_calc" function
+               (:arguments 
+                  ( ("hash" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1395 1412])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1413 1429])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1436 1452]))                  
+                :type "int")
+                nil [1382 1818])
+            ("pj_hash_calc_tolower" function
+               (:arguments 
+                  ( ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1862 1879])
+                    ("result" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1922 1935])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_str_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1978 1998]))                  
+                :type "int")
+                nil [1840 2205])
+            ("pj_hash_create" function
+               (:arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2248 2264])
+                    ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2265 2279]))                  
+                :type "int")
+                nil [2233 3036])
+            ("find_entry" function
+               (:pointer 2
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3073 3089])
+                    ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3090 3110])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3119 3135])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3136 3152])
+                    ("val" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3160 3170])
+                    ("hval" variable
+                       (:pointer 1
+                        :type ("pj_uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3171 3189])
+                    ("entry_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3197 3213])
+                    ("lower" variable (:type ("pj_bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3214 3230]))                  
+                :type ("pj_hash_entry" type (:type "class") nil nil))
+                nil [3038 5530])
+            ("pj_hash_get" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5560 5580])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5588 5604])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5605 5621])
+                    ("hval" variable
+                       (:pointer 1
+                        :type ("pj_uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5629 5647]))                  
+                :type "int")
+                nil [5547 5794])
+            ("pj_hash_get_lower" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5830 5850])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5864 5880])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5881 5897])
+                    ("hval" variable
+                       (:pointer 1
+                        :type ("pj_uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5911 5929]))                  
+                :type "int")
+                nil [5811 6075])
+            ("hash_set" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6099 6115])
+                    ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6116 6136])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6152 6168])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6169 6185])
+                    ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6186 6203])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6212 6224])
+                    ("entry_buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6225 6241])
+                    ("lower" variable (:type ("pj_bool_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6242 6259]))                  
+                :type "void")
+                nil [6077 6760])
+            ("pj_hash_set" function
+               (:arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6788 6804])
+                    ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6805 6825])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6831 6847])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6848 6864])
+                    ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6865 6882])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6888 6901]))                  
+                :type "int")
+                nil [6775 6971])
+            ("pj_hash_set_lower" function
+               (:arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7005 7021])
+                    ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7022 7042])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7054 7070])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7071 7087])
+                    ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7120 7137])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7138 7151]))                  
+                :type "int")
+                nil [6986 7220])
+            ("pj_hash_set_np" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7251 7271])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7280 7296])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7297 7313])
+                    ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7323 7340])
+                    ("entry_buf" variable (:type ("pj_hash_entry_buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7341 7369])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7379 7391]))                  
+                :type "int")
+                nil [7235 7474])
+            ("pj_hash_set_np_lower" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7511 7531])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7546 7562])
+                    ("keylen" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7563 7579])
+                    ("hval" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7594 7611])
+                    ("entry_buf" variable (:type ("pj_hash_entry_buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7647 7675])
+                    ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7690 7702]))                  
+                :type "int")
+                nil [7489 7784])
+            ("pj_hash_count" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7818 7839]))                  
+                :type "int")
+                nil [7803 7865])
+            ("pj_hash_first" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7910 7930])
+                    ("it" variable
+                       (:pointer 1
+                        :type ("pj_hash_iterator_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7939 7963]))                  
+                :type "int")
+                nil [7895 8167])
+            ("pj_hash_next" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8211 8231])
+                    ("it" variable
+                       (:pointer 1
+                        :type ("pj_hash_iterator_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8240 8264]))                  
+                :type "int")
+                nil [8197 8510])
+            ("pj_hash_this" function
+               (:arguments 
+                  ( ("ht" variable
+                       (:pointer 1
+                        :type ("pj_hash_table_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8540 8560])
+                    ("it" variable
+                       (:pointer 1
+                        :type ("pj_hash_iterator_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8561 8585]))                  
+                :type "int")
+                nil [8526 8663]))          
+      :file "hash.c"
+      :pointmax 9354
+      :fsize 9353
+      :lastmodtime '(23247 6399 187501 840000)
+      :unmatched-syntax '((semantic-list 8518 . 8525) (symbol 8512 . 8518) (semantic-list 8175 . 8196) (symbol 8169 . 8175) (semantic-list 7873 . 7894) (symbol 7867 . 7873) (semantic-list 7792 . 7802) (symbol 7786 . 7792) (semantic-list 7482 . 7488) (symbol 7476 . 7482) (semantic-list 7228 . 7234) (symbol 7222 . 7228) (semantic-list 6979 . 6985) (symbol 6973 . 6979) (semantic-list 6768 . 6774) (symbol 6762 . 6768) (semantic-list 5802 . 5810) (symbol 5796 . 5802) (semantic-list 5538 . 5546) (symbol 5532 . 5538) (semantic-list 2214 . 2232) (symbol 2208 . 2214) (semantic-list 1826 . 1839) (symbol 1820 . 1826) (semantic-list 1368 . 1381) (symbol 1362 . 1368))
+      :lexical-table 
+        '(("PJ_HASH_MULTIPLIER" . ((number "33" 1097 . 1099)))
+          )
+)
+    (semanticdb-table "activesock.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pj/activesock.h" include (:system-flag t) nil [859 885])
+            ("pj/compat/socket.h" include (:system-flag t) nil [886 915])
+            ("pj/assert.h" include (:system-flag t) nil [916 938])
+            ("pj/errno.h" include (:system-flag t) nil [939 960])
+            ("pj/log.h" include (:system-flag t) nil [961 980])
+            ("pj/pool.h" include (:system-flag t) nil [981 1001])
+            ("pj/sock.h" include (:system-flag t) nil [1002 1022])
+            ("pj/string.h" include (:system-flag t) nil [1023 1045])
+            ("PJ_ACTIVESOCK_MAX_LOOP" variable (:constant-flag t) nil [1248 1270])
+            ("read_type" type
+               (:members 
+                  ( ("TYPE_NONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1301 1311])
+                    ("TYPE_RECV" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1316 1326])
+                    ("TYPE_RECV_FROM" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1331 1347]))                  
+                :type "enum")
+                nil [1280 1348])
+            ("shutdown_dir" type
+               (:members 
+                  ( ("SHUT_NONE" variable
+                       (:constant-flag t
+                        :default-value (1386 1387)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1374 1387])
+                    ("SHUT_RX" variable
+                       (:constant-flag t
+                        :default-value (1403 1404)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1393 1404])
+                    ("SHUT_TX" variable
+                       (:constant-flag t
+                        :default-value (1420 1421)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1410 1421]))                  
+                :type "enum")
+                nil [1350 1424])
+            ("read_op" type
+               (:members 
+                  ( ("op_key" variable (:type ("pj_ioqueue_op_key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1447 1475])
+                    ("pkt" variable
+                       (:pointer 1
+                        :type ("pj_uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1480 1497])
+                    ("max_size" variable (:type "unsigned int") (reparse-symbol classsubparts) [1502 1522])
+                    ("size" variable (:type ("pj_size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1527 1544])
+                    ("src_addr" variable (:type ("pj_sockaddr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1549 1572])
+                    ("src_addr_len" variable (:type "int") (reparse-symbol classsubparts) [1577 1597]))                  
+                :type "struct")
+                nil [1426 1600])
+            ("accept_op" type
+               (:members 
+                  ( ("op_key" variable (:type ("pj_ioqueue_op_key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1625 1653])
+                    ("new_sock" variable (:type ("pj_sock_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1658 1679])
+                    ("rem_addr" variable (:type ("pj_sockaddr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1684 1707])
+                    ("rem_addr_len" variable (:type "int") (reparse-symbol classsubparts) [1712 1732]))                  
+                :type "struct")
+                nil [1602 1735])
+            ("send_data" type
+               (:members 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("pj_uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1760 1778])
+                    ("len" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1783 1800])
+                    ("sent" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1805 1823])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol classsubparts) [1828 1845]))                  
+                :type "struct")
+                nil [1737 1848])
+            ("pj_activesock_t" type
+               (:members 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1879 1901])
+                    ("stream_oriented" variable (:type ("pj_bool_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1906 1934])
+                    ("whole_data" variable (:type ("pj_bool_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1939 1962])
+                    ("ioqueue" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1967 1989])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1994 2011])
+                    ("async_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [2016 2039])
+                    ("shutdown" variable (:type "unsigned int") (reparse-symbol classsubparts) [2044 2065])
+                    ("max_loop" variable (:type "unsigned int") (reparse-symbol classsubparts) [2070 2090])
+                    ("cb" variable (:type ("pj_activesock_cb" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2095 2116])
+                    ("err_counter" variable (:type "unsigned int") (reparse-symbol classsubparts) [2312 2335])
+                    ("last_err" variable (:type ("pj_status_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2340 2363])
+                    ("send_data" variable (:type ("send_data" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2369 2397])
+                    ("read_op" variable
+                       (:pointer 1
+                        :type ("read_op" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2403 2427])
+                    ("read_flags" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2432 2457])
+                    ("read_type" variable (:type ("read_type" type (:type "enum") nil nil)) (reparse-symbol classsubparts) [2462 2488])
+                    ("accept_op" variable
+                       (:pointer 1
+                        :type ("accept_op" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2494 2522]))                  
+                :type "struct")
+                nil [1850 2525])
+            ("ioqueue_on_read_complete" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2565 2587])
+                    ("op_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2598 2626])
+                    ("bytes_read" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2637 2659]))                  
+                :type "void")
+                nil [2528 2660])
+            ("ioqueue_on_write_complete" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2699 2721])
+                    ("op_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2733 2761])
+                    ("bytes_sent" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2772 2794]))                  
+                :type "void")
+                nil [2661 2795])
+            ("pj_activesock_cfg_default" function
+               (:arguments 
+                  ( ("cfg" variable
+                       (:pointer 1
+                        :type ("pj_activesock_cfg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3111 3134]))                  
+                :type "int")
+                nil [3085 3253])
+            ("pj_activesock_create" function
+               (:arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4713 4729])
+                    ("sock" variable (:type ("pj_sock_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4737 4752])
+                    ("sock_type" variable (:type "int") (reparse-symbol arg-sub-list) [4760 4774])
+                    ("opt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_activesock_cfg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4782 4811])
+                    ("ioqueue" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4819 4841])
+                    ("cb" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_activesock_cb" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4849 4876])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4884 4900])
+                    ("p_asock" variable
+                       (:pointer 2
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4908 4934]))                  
+                :type "int")
+                nil [4691 6770])
+            ("pj_activesock_create_udp" function
+               (:arguments 
+                  ( ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6819 6835])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_sockaddr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6847 6871])
+                    ("opt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_activesock_cfg" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6883 6912])
+                    ("ioqueue" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6924 6946])
+                    ("cb" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_activesock_cb" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6958 6985])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6997 7013])
+                    ("p_asock" variable
+                       (:pointer 2
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7025 7051])
+                    ("bound_addr" variable
+                       (:pointer 1
+                        :type ("pj_sockaddr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7063 7087]))                  
+                :type "int")
+                nil [6793 8004])
+            ("pj_activesock_close" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8046 8069]))                  
+                :type "int")
+                nil [8026 8660])
+            ("pj_activesock_set_user_data" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8712 8735])
+                    ("user_data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8743 8759]))                  
+                :type "int")
+                nil [8683 8860])
+            ("pj_activesock_get_user_data" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8905 8928]))                  
+                :type "int")
+                nil [8877 8996])
+            ("pj_activesock_start_read" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9044 9067])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9078 9094])
+                    ("buff_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9105 9124])
+                    ("flags" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9135 9153]))                  
+                :type "int")
+                nil [9019 9522])
+            ("pj_activesock_start_read2" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9572 9595])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9608 9624])
+                    ("buff_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9637 9656])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9669 9685])
+                    ("flags" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9698 9716]))                  
+                :type "int")
+                nil [9545 10568])
+            ("pj_activesock_start_recvfrom" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10620 10643])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10651 10667])
+                    ("buff_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10675 10694])
+                    ("flags" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10702 10720]))                  
+                :type "int")
+                nil [10591 11100])
+            ("pj_activesock_start_recvfrom2" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11154 11177])
+                    ("pool" variable
+                       (:pointer 1
+                        :type ("pj_pool_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11187 11203])
+                    ("buff_size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [11213 11232])
+                    ("readbuf" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11242 11258])
+                    ("flags" variable (:type ("pj_uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11268 11286]))                  
+                :type "int")
+                nil [11123 12182])
+            ("ioqueue_on_read_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12222 12244])
+                    ("op_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12255 12283])
+                    ("bytes_read" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12294 12316]))                  
+                :type "void")
+                nil [12185 17476])
+            ("send_remaining" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17513 17536])
+                    ("send_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17544 17574]))                  
+                :type ("pj_status_t" type (:type "class") nil nil))
+                nil [17479 18067])
+            ("pj_activesock_send" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18110 18133])
+                    ("send_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18139 18169])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18175 18192])
+                    ("size" variable
+                       (:pointer 1
+                        :type ("pj_ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18198 18215])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [18221 18236]))                  
+                :type "int")
+                nil [18090 19169])
+            ("pj_activesock_sendto" function
+               (:arguments 
+                  ( ("asock" variable
+                       (:pointer 1
+                        :type ("pj_activesock_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19214 19237])
+                    ("send_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19245 19275])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [19283 19300])
+                    ("size" variable
+                       (:pointer 1
+                        :type ("pj_ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19308 19325])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19333 19348])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("pj_sockaddr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19356 19382])
+                    ("addr_len" variable (:type "int") (reparse-symbol arg-sub-list) [19390 19403]))                  
+                :type "int")
+                nil [19192 19658])
+            ("ioqueue_on_write_complete" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19699 19721])
+                    ("op_key" variable
+                       (:pointer 1
+                        :type ("pj_ioqueue_op_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19733 19761])
+                    ("bytes_sent" variable (:type ("pj_ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19772 19794]))                  
+                :type "void")
+                nil [19661 20939]))          
+      :file "activesock.c"
+      :pointmax 25585
+      :fsize 25584
+      :lastmodtime '(23247 6399 178912 32000)
+      :unmatched-syntax '((semantic-list 19178 . 19191) (symbol 19172 . 19178) (semantic-list 18076 . 18089) (symbol 18070 . 18076) (semantic-list 11109 . 11122) (symbol 11103 . 11109) (semantic-list 10577 . 10590) (symbol 10571 . 10577) (semantic-list 9531 . 9544) (symbol 9525 . 9531) (semantic-list 9005 . 9018) (symbol 8999 . 9005) (semantic-list 8869 . 8876) (symbol 8863 . 8869) (semantic-list 8669 . 8682) (symbol 8663 . 8669) (semantic-list 8012 . 8025) (symbol 8006 . 8012) (semantic-list 6779 . 6792) (symbol 6773 . 6779) (semantic-list 4677 . 4690) (symbol 4671 . 4677) (semantic-list 3078 . 3084) (symbol 3072 . 3078))
+      :lexical-table 
+        '(("PJ_ACTIVESOCK_MAX_LOOP" . ((number "50" 1275 . 1277)))
+          )
+))
+  :file "!Users!lizhengqian!github!pjproject!pjlib!src!pj!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

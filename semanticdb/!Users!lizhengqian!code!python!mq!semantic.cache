@@ -1,0 +1,48 @@
+;; Object mq/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mq/"
+  :tables
+  (list
+    (semanticdb-table "thread.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("threading" include nil nil [1 23])
+            ("time" include nil nil [1 23])
+            ("cv2" include nil nil [24 34])
+            ("datetime" include nil nil [35 50])
+            ("face_recognition" include nil nil [51 74])
+            ("pika" include nil nil [75 86])
+            ("sys" include nil nil [87 97])
+            ("url" variable nil nil [166 213])
+            ("cap" variable nil nil [214 241])
+            ("scale" variable nil nil [270 279])
+            ("stream_dict" variable nil nil [281 305])
+            ("connection" variable nil nil [307 388])
+            ("channel" variable nil nil [389 419])
+            ("detect_face_for_stream" function (:arguments 
+              ( ("cap" variable nil (reparse-symbol function_parameters) [448 451]))              ) nil [421 1087])
+            ("face_detect" function nil nil [1133 1414])
+            ("print" code nil nil [1415 1481])
+            ("t" variable nil nil [1483 1547])
+            ("t" code nil nil [1548 1557])
+            ("channel" code nil nil [1608 1705])
+            ("result" variable nil nil [1707 1753])
+            ("queue_name" variable nil nil [1754 1786])
+            ("channel" code nil nil [1787 1913])
+            ("callback" function (:arguments 
+              ( ("ch" variable nil (reparse-symbol function_parameters) [1928 1930])
+                ("method" variable nil (reparse-symbol function_parameters) [1932 1938])
+                ("properties" variable nil (reparse-symbol function_parameters) [1940 1950])
+                ("body" variable nil (reparse-symbol function_parameters) [1952 1956]))              ) nil [1915 2059])
+            ("channel" code nil nil [2060 2166])
+            ("channel" code nil nil [2168 2193])
+            ("t" code nil nil [2195 2203])
+            ("print" code nil nil [2204 2263]))          
+      :file "thread.py"
+      :pointmax 2264
+      :fsize 2263
+      :lastmodtime '(23220 25126 660880 880000)
+      :unmatched-syntax nil))
+  :file "!Users!lizhengqian!code!python!mq!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

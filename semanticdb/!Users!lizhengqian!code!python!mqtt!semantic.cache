@@ -1,0 +1,51 @@
+;; Object mqtt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mqtt/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [1 11])
+            ("PyQt5.QtWidgets" include nil nil [12 74])
+            ("PyQt5.QtGui" include nil nil [75 104])
+            ("PyQt5.QtCore" include nil nil [105 138])
+            ("App" type
+               (:superclasses ("QWidget")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [192 210])
+                            ("self" variable nil (reparse-symbol indented_block_body) [219 263])
+                            ("self" variable nil (reparse-symbol indented_block_body) [272 286])
+                            ("self" variable nil (reparse-symbol indented_block_body) [295 308])
+                            ("self" variable nil (reparse-symbol indented_block_body) [317 333])
+                            ("self" variable nil (reparse-symbol indented_block_body) [342 359])
+                            ("self" code nil (reparse-symbol indented_block_body) [368 381]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [177 181]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [164 382])
+                    ("initUI" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [398 402]))                          )
+                        (reparse-symbol indented_block_body) [387 721])
+                    ("" code nil (reparse-symbol indented_block_body) [736 738])
+                    ("on_click" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [756 760]))                          )
+                        (reparse-symbol indented_block_body) [743 799]))                  
+                :type "class")
+                nil [140 799])
+            ("if" code nil nil [801 902]))          
+      :file "test.py"
+      :pointmax 902
+      :fsize 901
+      :lastmodtime '(23241 49843 536364 907000)
+      :unmatched-syntax nil))
+  :file "!Users!lizhengqian!code!python!mqtt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
